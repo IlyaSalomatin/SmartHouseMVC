@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0" />
+    <title>Home Page</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/StyleMagnific.css" rel="stylesheet" />
+    <link href="~/Scripts/MyStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <div class="headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2"><input type="image" class="robotimage" id="badrobotbutton" src="~/Scripts/badrobot.png" /></div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-9 mytext"><img class="alivehouseImg" src="~/Scripts/alivehouse.png" /></div>
+                <div class="col-xs-1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 sorryText"><h1>Sorry, access denied!</h1></div>
+        </div>
+    </div>
+    <div class="loginpage"  >
+        @Html.Partial("AuthLogin")
+    </div>
+    <div class="Buttons" style="opacity: 0.4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4"><a href="#" class="buttonChildroom">Childroom</a></div>
+                <div class="col-xs-4"><a href="#" class="buttonKitchen">Kitchen</a></div>
+                <div class="col-xs-4"><a href="#" class="buttonLivingroom">Livingroom</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"><a href="#" class="buttonOverallfunctionality">Overallfunctionality</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4"><a href="#" class="buttonBedroom">Bedroom</a></div>
+                <div class="col-xs-4"><a href="#" class="buttonHall">Hall</a></div>
+                <div class="col-xs-4"><a href="#" class="buttonBathroom">Bathroom</a></div>
+            </div>
+        </div>
+    </div>        
+    <script src="~/Scripts/MyJS.js"></script>
+    <script src="~/Scripts/magnificPopup.js"></script>
+</body>
+</html>
