@@ -11,7 +11,7 @@ using System.Text;
 
 namespace SmartHouseMVC.Controllers
 {
-    public class MyAuthenticationController : Controller
+    public class AuthenticationController : Controller
     {
         private DbRoomContext db = new DbRoomContext();
 
@@ -33,7 +33,8 @@ namespace SmartHouseMVC.Controllers
             
             if (model.Password == null && model.Name == null)
             {
-                return RedirectToAction("IndexAUTH", "MyAuthentication"); 
+                //Response.StatusCode = 400;                
+                return RedirectToAction("IndexAUTH", "Authentication"); 
             }
             else {}
            
@@ -41,13 +42,15 @@ namespace SmartHouseMVC.Controllers
             if (user != null)
             {
                 FormsAuthentication.SetAuthCookie(model.Name, true);
-                string us = User.Identity.Name;
+                //Response.StatusCode = 200;                
                 return RedirectToAction("Index", "Home");
             }
             else
             {
-                return RedirectToAction("IndexAUTH", "MyAuthentication");
-            }         
+                //Response.StatusCode = 400;               
+                return RedirectToAction("IndexAUTH", "Authentication");
+            }
+            //return new EmptyResult();
         }
 
 

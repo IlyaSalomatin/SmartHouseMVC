@@ -7,7 +7,7 @@ namespace SmartHouseMVC.Models.Enums
 {
     public enum TimerOzonation
     {
-        Off = 0,
+        off = 0,
         TwoMinutes = 120000,
         FiveMinutes = 300000,
         TenMinutes = 600000,

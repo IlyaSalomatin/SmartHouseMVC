@@ -8,10 +8,10 @@ namespace SmartHouseMVC.Models.Enums
     public enum Heating
     {
         off,
-        low,
-        medium,
-        high,
-        max,
+        Low,
+        Medium,
+        High,
+        Max,
 
     }
 }

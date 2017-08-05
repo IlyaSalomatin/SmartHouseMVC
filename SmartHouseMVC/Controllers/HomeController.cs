@@ -19,7 +19,7 @@ namespace SmartHouseMVC.Controllers
             }
             else
             {
-                return RedirectToAction("IndexAUTH", "MyAuthentication");
+                return RedirectToAction("IndexAUTH", "Authentication");
             }            
         }
     }

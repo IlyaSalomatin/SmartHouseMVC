@@ -1,8 +1,8 @@
 ﻿@model SmartHouseMVC.Models.Classes.Login
 
-<div id="passwordform">
-        
-        <div>          
+<div  id="passwordform">
+        @using (Html.BeginForm("AuthLogin", "Authentication"))
+        {                  
             <div>
                 @Html.LabelFor(model => model.Name) <br />               
                 @Html.EditorFor(model => model.Name)                
@@ -12,8 +12,7 @@
                 @Html.EditorFor(model => model.Password)               
             </div>
             <div>
-                <input type="button" value="Sign in" id="buttomFormPass"/>
-            </div>
-            
-        </div>
+                <input type="submit" value="Sign in" id="buttomFormPass"/>
+            </div>                   
+        }
 </div>

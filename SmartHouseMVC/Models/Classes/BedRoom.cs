@@ -30,7 +30,7 @@ namespace SmartHouseMVC.Models.Classes
         {
             int time = (int)OzonationState;
             Thread.Sleep(time);
-            OzonationState = TimerOzonation.Off;
+            OzonationState = TimerOzonation.off;
         }
         public void SetTimerHumidification(TimerHumidification time)
         {
@@ -44,7 +44,7 @@ namespace SmartHouseMVC.Models.Classes
         {
             int time = (int)HumidificationState;
             Thread.Sleep(time);
-            HumidificationState = TimerHumidification.Off;
+            HumidificationState = TimerHumidification.off;
         }
         public void OnConditioning(int temp)
         {

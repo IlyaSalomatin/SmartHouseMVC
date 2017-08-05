@@ -25,7 +25,7 @@ namespace SmartHouseMVC.Models.Classes
         {
             int time = (int)OzonationState;
             Thread.Sleep(time);
-            OzonationState = TimerOzonation.Off;
+            OzonationState = TimerOzonation.off;
         }
     }
 }

@@ -11,13 +11,17 @@ namespace SmartHouseMVC.Controllers
     public class DbRoomsController : Controller
     {
         private DbRoomContext db = new DbRoomContext();
-        // GET: DbRooms
-        public ActionResult Index()
+
+        [Authorize]
+        public ActionResult Bedroom()
         {
-            int id = 7;
-            DbRoom ri = db.DbRooms.Find(id);
-            ViewBag.Entitys = ri.Name;
-            return View();
+            DbRoom r = db.DbRooms.Find(3);
+            return View(r);
+        }
+
+        public void RoomAction(DbRoom room)
+        {
+
         }
 
         protected override void Dispose(bool disposing)
